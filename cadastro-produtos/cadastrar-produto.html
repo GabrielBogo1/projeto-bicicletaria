@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GoBike - Cadastrar Produto</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="../icone-oficial.jpg" type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Cadastrar novo produto</h1>
+    <form id="form">
+      <label for="name">Categoria:</label>
+      <input type="text" id="categoria" />
+
+      <label for="descricao">Descrição: </label>
+      <input type="text" id="descricao" />
+
+      <label for="fabricante">Fabricante: </label>
+      <input type="text" id="fabricante" />
+
+      <label for="precovenda">Preço de venda: </label>
+      <input type="number" id="precovenda" />
+
+      <label for="precocusto">Preço de custo: </label>
+      <input type="number" id="precocusto" />
+
+      <label for="imgproduto">Imagem do produto: </label>
+      <input
+        type="file"
+        name="arquivos"
+        accept="image/png, image/jpeg"
+        multiple
+        title="Selecione um arquivo"
+      />
+      <div class="btn-field">
+        <button type="submit" id="cadastrar">Cadastrar</button>
+        <button type="button">Voltar</button>
+      </div>
+    </form>
+  </body>
+</html>
