@@ -103,6 +103,11 @@ button:hover{
     background-color: rgba(0, 0, 255, 0.658);;
 }
 
+button a {
+    color: white;
+    text-decoration: none;
+}
+
 .input-group{
     height: 175px;
 }
