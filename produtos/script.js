@@ -20,7 +20,7 @@ products.forEach(function (product, index) {
   div.appendChild(description);
 
   let price = document.createElement('span');
-  price.textContent = 'R$' +  product.price;
+  price.textContent = 'R$' +  product.sellprice;
   div.appendChild(price);
 
   let button = document.createElement('button');

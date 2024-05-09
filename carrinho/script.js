@@ -51,7 +51,7 @@ cart.forEach(function(index) {
    
     let priceDiv = document.createElement('div');
     priceDiv.className = "priceDiv"
-    priceDiv.textContent = 'R$' + product.price;
+    priceDiv.textContent = 'R$' + product.sellprice;
 
    
     productInfo.appendChild(descriptionDiv);
@@ -72,7 +72,7 @@ cart.forEach(function(index) {
 
     cartList.appendChild(li);
 
-    total += parseFloat(product.price);
+    total += parseFloat(product.sellprice);
     let finalPricee = document.getElementById("total");
     finalPricee.textContent = 'Total: R$' + total;
 });
