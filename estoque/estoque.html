@@ -1,19 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GoBike - Estoque</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="../icone-oficial.jpg" type="image/x-icon" />
-    <script src="script.js" defer></script>
+
     <script
       src="https://kit.fontawesome.com/2c5d4e4a0b.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <h1>EM DESENVOLVIMENTO</h1>
-    <a href="../home/home.html">voltar</a>
+    <nav id="sidebar">
+      <div id="sidebar-content">
+        <div id="content">
+          <img src="../assets/icone-oficial.jpg" id="logo" alt="logo" />
+          <p id="infos">
+            <span class="item-description">Seja-bem vindo(a)</span>
+            <span class="item-description">Nosso catálogo</span>
+          </p>
+        </div>
+        <ul id="side-items">
+          <li class="side-item">
+            <a href="../home/home.html">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="item-description"> Dashboard </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="../cadastro-produtos/cadastrar-produto.html">
+              <i class="fa-solid fa-box"></i>
+              <span class="item-description"> Cadastrar produto </span>
+            </a>
+          </li>
+
+          <li class="side-item active">
+            <a href="../estoque/estoque.html">
+              <i class="fa-solid fa-dolly"></i>
+              <span class="item-description"> Estoque </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="../ordem-servico/ordem-servico.html">
+              <i class="fa-solid fa-toolbox"></i>
+              <span class="item-description"> Ordens de serviço </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="../produtos/produtos.html">
+              <i class="fa-solid fa-box-open"></i>
+              <span class="item-description"> Nossos produtos </span>
+            </a>
+          </li>
+
+          <li class="side-item" id="cart">
+            <a href="../carrinho/carrinho.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="item-description"> Carrinho </span>
+            </a>
+          </li>
+        </ul>
+
+        <button id="open-btn">
+          <i id="open-btn-icon" class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div id="logout">
+        <button id="logout-btn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span class="item-description">
+            <a href="../login/index.html">Sair</a>
+          </span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <h1>Controle de estoque</h1>
+
+      <table id="salesTable">
+        <tr>
+          <th>Descrição</th>
+          <th>Categoria</th>
+          <th>Forma de pagamento</th>
+          <th>Data</th>
+          <th>Vendedor</th>
+        </tr>
+      </table>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>

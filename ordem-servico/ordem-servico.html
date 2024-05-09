@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,122 @@
     ></script>
   </head>
   <body>
-    <h1>EM DESENVOLVIMENTO</h1>
-    <a href="../home/home.html">voltar</a>
+    <div id="backgroundModal"></div>
+    <nav id="sidebar">
+      <div id="sidebar-content">
+        <div id="content">
+          <img src="../assets/icone-oficial.jpg" id="logo" alt="logo" />
+          <p id="infos">
+            <span class="item-description">Seja-bem vindo(a)</span>
+            <span class="item-description">Nosso catálogo</span>
+          </p>
+        </div>
+        <ul id="side-items">
+          <li class="side-item">
+            <a href="../home/home.html">
+              <i class="fa-solid fa-chart-line"></i>
+              <span class="item-description"> Dashboard </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="../cadastro-produtos/cadastrar-produto.html">
+              <i class="fa-solid fa-box"></i>
+              <span class="item-description"> Cadastrar produto </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="../estoque/estoque.html">
+              <i class="fa-solid fa-dolly"></i>
+              <span class="item-description"> Estoque </span>
+            </a>
+          </li>
+
+          <li class="side-item active">
+            <a href="../ordem-servico/ordem-servico.html">
+              <i class="fa-solid fa-toolbox"></i>
+              <span class="item-description"> Ordens de serviço </span>
+            </a>
+          </li>
+
+          <li class="side-item">
+            <a href="../produtos/produtos.html">
+              <i class="fa-solid fa-box-open"></i>
+              <span class="item-description"> Nossos produtos </span>
+            </a>
+          </li>
+
+          <li class="side-item" id="cart">
+            <a href="../carrinho/carrinho.html">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <span class="item-description"> Carrinho </span>
+            </a>
+          </li>
+        </ul>
+
+        <button id="open-btn">
+          <i id="open-btn-icon" class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div id="logout">
+        <button id="logout-btn">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span class="item-description">
+            <a href="../login/index.html">Sair</a>
+          </span>
+        </button>
+      </div>
+    </nav>
+    <main>
+      <h1>Ordens de serviço</h1>
+      <table id = "orderTable">
+        <div class="btnField"><button type="button" onclick=  "openModal()" id="addSo">Cadastrar Nova</button></div>
+        <thead>
+          <tr>
+            <th>Tipo de serviço</th>
+            <th>Descrição</th>
+            <th>Data de entrada</th>
+            <th>Previsão de conclusão</th>
+            <th>Contato Cliente</th>
+            <th>Pagamento</th>
+           <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="modal-container">
+        
+        <div class="modal">
+          <form>
+            <label for="service">Tipo de serviço</label>
+            <input id="service"  type="text"/>
+
+            <label for="description">Descrição</label>
+            <input id="description" type="text" required />
+    
+            <label for="initialDate">Data de Entrada</label>
+            <input id="initialDate" type="date" required lang="pt-br" />
+
+            <label for="finalDate">Previsão de conclusão</label>
+            <input id="finalDate" type="date" required lang="pt-br" />
+
+            <label for="service">Contato Cliente</label>
+            <input id="clientContact" type="text" required />
+    
+            <label for="paymentLabel" id="paymentLabel">Forma de pagamento:</label>
+            <select id="paymentSelect">
+              <option value="Cartão de Crédito">Cartão de Crédito</option>
+              <option value="PIX">PIX</option>
+              <option value="Cartao de Débito">Cartão de débito</option>
+            </select>
+            <button id="saveBtn">Salvar</button>
+            <button id="cancelBtn">Cancelar</button>
+          </form>
+        </div>
+      </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
   </body>
 </html>

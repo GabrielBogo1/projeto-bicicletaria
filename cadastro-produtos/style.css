@@ -68,16 +68,6 @@ button {
     background-color: rgba(0, 0, 255, 0.692);
 }
 
-@media only screen and (max-width: 768px) {
-    form {
-        max-width: 100%;
-    }
-
-    h1::after {
-        bottom: -8px;
-    }
-}
-
 main {
     padding-top: 20px;
     margin-left: 82px;
@@ -238,4 +228,14 @@ main {
     gap: 14px;
 }
 
+
+@media only screen and (max-width: 768px) {
+    form {
+        max-width: 100%;
+    }
+
+    h1::after {
+        bottom: -8px;
+    }
+}
 
