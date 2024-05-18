@@ -22,28 +22,21 @@
           </p>
         </div>
         <ul id="side-items">
-          <li class="side-item">
+          <li class="side-item" id="dashboard">
             <a href="../home/home.html">
               <i class="fa-solid fa-chart-line"></i>
               <span class="item-description"> Dashboard </span>
             </a>
           </li>
 
-          <li class="side-item active">
-            <a href="./cadastrar-produto.html">
-              <i class="fa-solid fa-box"></i>
-              <span class="item-description"> Cadastrar produto </span>
-            </a>
-          </li>
-
-          <li class="side-item">
+          <li class="side-item" id="sales">
             <a href="../estoque/estoque.html">
               <i class="fa-solid fa-dolly"></i>
               <span class="item-description"> Estoque </span>
             </a>
           </li>
 
-          <li class="side-item">
+          <li class="side-item" id="order">
             <a href="../ordem-servico/ordem-servico.html">
               <i class="fa-solid fa-toolbox"></i>
               <span class="item-description"> Ordens de serviço </span>
@@ -79,7 +72,7 @@
       </div>
     </nav>
     <main>
-      <h1>Cadastrar novo produto</h1>
+      <h1 id="title">Cadastrar novo produto</h1>
       <form id="form">
         <label for="category">Categoria:</label>
         <input type="text" id="category" />
@@ -91,7 +84,7 @@
         <input type="number" id="sellprice" />
         <label for="price">Preço de custo: </label>
         <input type="number" id="price" />
-        <label for="productimage">Imagem do produto: </label>
+        <label id="imgTitle" for="productimage">Imagem do produto: </label>
         <input
           type="file"
           name="productimage"
@@ -103,6 +96,7 @@
           <button type="submit" onclick="addProduct(event)" id="addBtn">
             Cadastrar
           </button>
+          <button id="goBack" onclick="back(event)">Voltar</button>
         </div>
       </form>
     </main>

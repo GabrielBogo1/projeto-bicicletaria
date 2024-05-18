@@ -15,13 +15,34 @@ products.forEach(function (product, index) {
   img.width = 100;
   div.appendChild(img);
 
+  let descriptionContainer = document.createElement('div');
+  descriptionContainer.className = 'description-container';
+  
   let description = document.createElement('p');
   description.textContent = product.description;
-  div.appendChild(description);
+  descriptionContainer.appendChild(description);
+  
+  let editLink = document.createElement('a');
+  editLink.href = '../cadastro-produtos/cadastrar-produto.html?edit=' + index;
+  editLink.className = 'editLink';
+  editLink.innerHTML = '<i class="fas fa-pencil-alt"></i>';
+  editLink.style.color = 'yellow';
+  descriptionContainer.appendChild(editLink);
+
+  
+
+  let viewLink = document.createElement('a');
+  viewLink.href = '../cadastro-produtos/cadastrar-produto.html?edit=' + index;
+  viewLink.innerHTML = '<i class="fas fa-eye"></i>';
+  viewLink.style.color = 'blue'
+  descriptionContainer.appendChild(viewLink);
+  
+  div.appendChild(descriptionContainer);
 
   let price = document.createElement('span');
   price.textContent = 'R$' +  product.sellprice;
   div.appendChild(price);
+
 
   let button = document.createElement('button');
   button.className = 'cartButton'
@@ -38,6 +59,7 @@ products.forEach(function (product, index) {
   productList.appendChild(div);
 });
 
+
 document.addEventListener('DOMContentLoaded', function () {
   var isLoggedIn = localStorage.getItem('loggedIn');
   if (isLoggedIn === 'true') {
@@ -46,6 +68,13 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById ('sales').style.display = 'none';
       document.getElementById ('dashboard').style.display = 'none';
       document.getElementById ('addProduct').style.display = 'none';
+
+      let editLinks = document.getElementsByClassName('editLink');
+      for (let i = 0; i < editLinks.length; i++) {
+        editLinks[i].style.display = 'none';
+      }
+
+      
   }
 
   if (isLoggedIn == 'false'){

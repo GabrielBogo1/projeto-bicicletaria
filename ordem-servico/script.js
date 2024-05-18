@@ -15,7 +15,9 @@ const closeModal = () => {
 
 const updateTable = () => {
     const tableBody = document.querySelector('#orderTable tbody');
+    const staticRow = tableBody.querySelector('tr');
     tableBody.innerHTML = '';
+    tableBody.appendChild(staticRow);
 
     let orders = JSON.parse(localStorage.getItem('orders')) || [];
 
@@ -39,9 +41,7 @@ const updateTable = () => {
         deleteIcon.addEventListener('click', () => deleteOrder(index)); 
         actionsCell.appendChild(deleteIcon);
     });
-}
-
-window.addEventListener('load', updateTable);
+};
 
 
 const saveOrder = () => {

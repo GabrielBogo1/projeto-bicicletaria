@@ -29,13 +29,6 @@
             </a>
           </li>
 
-          <li class="side-item" id="addProduct">
-            <a href="../cadastro-produtos/cadastrar-produto.html">
-              <i class="fa-solid fa-box"></i>
-              <span class="item-description"> Cadastrar produto </span>
-            </a>
-          </li>
-
           <li class="side-item" id="sales">
             <a href="../estoque/estoque.html">
               <i class="fa-solid fa-dolly"></i>
@@ -81,13 +74,46 @@
     <main>
       <h1>Produtos</h1>
       <div class="btnField">
-        <button id ="addBtn"
+        <button
+          id="addBtn"
           onclick="window.location.href = '../cadastro-produtos/cadastrar-produto.html'"
         >
           Cadastrar Novo
         </button>
       </div>
-      <div id="productList"></div>
+      <div id="productList">
+        <div class="card">
+          <img src="../assets/bicicleta.png" alt="bicicleta" />
+          <div class="description-container">
+            <p>Bicicleta Convencional</p>
+            <a href="../cadastro-produtos/cadastrar-produto.html"
+              ><i class="fas fa-eye" style="color: blue"></i
+            ></a>
+          </div>
+          <p id="comment">
+            item apenas para visualização, carrinho/visualizacao com informacoes
+            funciona apenas em produtos cadastrados pelo usuario
+          </p>
+          <span>R$ 1000</span>
+          <button class="cartButton">+ Carrinho</button>
+        </div>
+
+        <div class="card">
+          <img src="../assets/capacete.png" alt="bicicleta" />
+          <div class="description-container">
+            <p>Capacete</p>
+            <a href="../cadastro-produtos/cadastrar-produto.html"
+              ><i class="fas fa-eye" style="color: blue"></i
+            ></a>
+          </div>
+          <p id="comment">
+            item apenas para visualização, carrinho/visualizacao com informacoes
+            funciona apenas em produtos cadastrados pelo usuario
+          </p>
+          <span>R$ 85</span>
+          <button class="cartButton">+ Carrinho</button>
+        </div>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>
